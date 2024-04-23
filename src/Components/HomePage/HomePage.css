@@ -1,0 +1,51 @@
+ .navbar{
+       /* background-color: blue; */
+     display: flex;
+       justify-content: space-between;
+         align-items: center;
+     }
+     .logo-title{
+     font-family: "Katibeh", serif;
+         font-size: 20px;
+     display: flex;
+         align-items: center;
+     }
+    
+     .register-btn{
+         /* padding: 2px; */
+        margin-right: 100px;
+         font-family: "Katibeh", serif;
+         font-size: 35px;
+         vertical-align: middle;
+         width: 180px;
+         height: 79px;
+         border-radius: 10px;
+       border: none;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+         display: inline-block; 
+         /* margin-right: 40px; */
+         /* display: flex; */
+      /* justify-content: space-between; */
+        
+    }
+    .login-btn{
+        /* padding: 20px; */
+      margin-right: 300px;
+        font-family: "Katibeh", serif;
+       font-size: 35px;
+       vertical-align: middle;
+     width: 180px;
+       height: 79px;
+      border-radius: 10px;
+       border: none;
+        background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+    .heading-text{
+       background-color: green;
+       height: 60px;
+         color: white;
+    }

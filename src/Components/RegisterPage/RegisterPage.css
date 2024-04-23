@@ -1,0 +1,86 @@
+.block{
+    background:green ;
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    align-items: center;
+}
+.cont{
+    background-color:white;
+    width: 730px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 530px;
+}
+.logo-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+h2{
+    text-align: center;
+    font-family: "Katibeh", serif;
+    font-size: 50px;
+    margin: 0;
+}
+.form-inputs{
+    position: relative;
+    left: 100px;
+    padding: 30px;
+    margin-bottom: 10px;
+
+}
+.fullName{
+    font-family: "Katibeh", serif;
+    font-size: 40px;
+    width: 480px;
+    height: 105px;
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: 36px 36px 100px 0px #00000040;
+    border-radius: 10px;
+}
+
+.nin{
+    font-family: "Katibeh", serif;
+    font-size: 40px;
+    width: 480px;
+    height: 105px;
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: 36px 36px 100px 0px #00000040;
+    border-radius: 10px;
+}
+.password{
+    font-family: "Katibeh", serif;
+    font-size: 40px;
+    width: 480px;
+    height: 105px;
+    border: none;
+    box-shadow: 36px 36px 100px 0px #00000040;
+    border-radius: 10px;
+}
+.register-btn{
+    margin-top: 20px;
+    color: black;
+    align-items: center;
+    text-align: center;
+}
+.nav-buttons{
+    margin: auto;
+}
+.register-btn{
+    position: relative;
+    left: 150px;
+    
+}
+h4{
+    font-family: "Katibeh", serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
