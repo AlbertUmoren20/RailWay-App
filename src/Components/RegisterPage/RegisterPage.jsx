@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import './RegisterPage.css'
 import image from '../Assets/Images/railway-logo.png'
+import { useNavigate } from "react-router-dom";
 
 
 const RegisterPage = () => {
     // const [action, setAction] = useState("Login") 
 
+    const navigate = useNavigate();
+    const SignupPageClick = () => {
+     navigate('/Signup');
+};
 
     return(
         <div className="register-container">
@@ -54,12 +59,10 @@ const RegisterPage = () => {
       <button className='register-btn'>Register</button>
       </div>
        </form>
-
        </div>
-
      </div>
       </div>
-      <h4>Already have an account? Click <span style={{color: "green", cursor: "pointer"}}>Log In</span></h4>
+      <h4>Already have an account? Click <span style={{color: "green", cursor: "pointer"}} onClick={SignupPageClick}>Sign Up</span></h4>
       </div>
     )
 }

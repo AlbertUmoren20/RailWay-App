@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
 import './SignupPage.css'
 import Img from '../Assets/Images/railway-logo.png'
+import { useNavigate } from 'react-router-dom';
 
 const SignupPage = () => {
+
+
+    const navigate = useNavigate();
+    const RegisterPageClick = () => {
+     navigate('/Register');
+};
+
+
     const [fullName, setFullName] = useState('');
     const [railwayId, setRailwayId] = useState('');
     const [password, setPassword] = useState('');
@@ -83,7 +92,7 @@ const SignupPage = () => {
        </div>
 
        <div className='nav-buttons'>
-      <button className='login-btn' onClick={handleSubmit}>Login</button>
+      <button className='signup-btn' onClick={handleSubmit}>Sign Up</button>
       </div>
        </form>
 
@@ -91,7 +100,7 @@ const SignupPage = () => {
 
      </div>
       </div>
-      <h4>Don't have an account? Click <span style={{color: "green", cursor: "pointer"}}>Register</span></h4>
+      <h4>Don't have an account? Click <span style={{color: "green", cursor: "pointer"}} onClick={RegisterPageClick}>Register</span></h4>
       </div>
   )
 }

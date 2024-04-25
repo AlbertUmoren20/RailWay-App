@@ -1,51 +1,148 @@
- .navbar{
-       /* background-color: blue; */
-     display: flex;
-       justify-content: space-between;
-         align-items: center;
-     }
-     .logo-title{
-     font-family: "Katibeh", serif;
-         font-size: 20px;
-     display: flex;
-         align-items: center;
-     }
-    
-     .register-btn{
-         /* padding: 2px; */
-        margin-right: 100px;
-         font-family: "Katibeh", serif;
-         font-size: 35px;
-         vertical-align: middle;
-         width: 180px;
-         height: 79px;
-         border-radius: 10px;
-       border: none;
-        background-color: green;
-        color: white;
-        cursor: pointer;
-         display: inline-block; 
-         /* margin-right: 40px; */
-         /* display: flex; */
-      /* justify-content: space-between; */
-        
-    }
-    .login-btn{
-        /* padding: 20px; */
-      margin-right: 300px;
+    .navbar{
+          /* background-color: blue; */
+        display: flex;
+          justify-content: space-between;
+            align-items: center;
+        }
+        .logo-title{
         font-family: "Katibeh", serif;
-       font-size: 35px;
-       vertical-align: middle;
-     width: 180px;
-       height: 79px;
-      border-radius: 10px;
-       border: none;
+            font-size: 20px;
+        display: flex;
+            align-items: center;
+        }
+        
+        .home-register-btn{
+            /* padding: 2px; */
+            /* margin-right: 100px; */
+            position: relative;
+            top: 15px;
+            /* Right: 1000px; */
+            font-family: "Katibeh", serif;
+            font-size: 35px;
+            vertical-align: middle;
+            width: 180px;
+            height: 79px;
+            border-radius: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            /* margin-right: 40px; */
+            /* display: flex; */
+          /* justify-content: space-between; */
+            
+        }
+        .home-signup-btn{
+          position: relative;
+          top: 15px;
+          left: 100px;
+            /* padding: 20px; */
+          /* margin-right: 300px; */
+            font-family: "Katibeh", serif;
+          font-size: 35px;
+          vertical-align: middle;
+          width: 180px;
+          height: 79px;
+          border-radius: 10px;
+        border: none;
         background-color: green;
-      color: white;
-      cursor: pointer;
-    }
-    .heading-text{
-       background-color: green;
-       height: 60px;
-         color: white;
-    }
+          color: white;
+          cursor: pointer;
+        }
+        .heading-text{
+          background-color: green;
+          height: 70px;
+          color: white;
+          padding: 5px;
+        }
+        .home-text{
+          text-align: justify;
+          font-size: 30px;
+          color: white;
+          font-weight: 100;
+        }
+        .home-iconlinks{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .homeicon{
+          display: flex;
+          cursor: pointer;
+        }
+        .block-elements{
+          display: flex;
+          justify-content: space-evenly;
+        }
+        .block1{
+          background-color: green;
+          width: 300px;
+          height: 400px;
+          position: relative;
+          /* left: 200px; */
+          top: 10px;
+          box-shadow: -35px 0px 50px 0px #00000040;
+          border-radius: 10px;
+        }
+        .block2{
+          background-color: white;
+          width: 300px;
+          height: 400px;
+          position: relative;
+          /* left: 200px; */
+          top: 10px;
+          /* box-shadow: 35px 35px 100px 0px #00000040; */
+          box-shadow: -35px -35px 100px 0px #00000040;
+          border-radius: 10px;
+        }
+        .footer{
+          background-color: green;
+          height: 20px;
+          color: white;
+          padding: 5px;
+          margin-top: 58px;
+        }
+        .linethrough{
+          border: none;
+          height: 5px;
+          background-color: #83D0FC;
+        }
+        .block1-text{
+          margin-top: 10px;
+          font-family: "Katibeh", serif;
+          font-size: 30px;
+          font-weight: 300px;
+          padding: 10px;
+          color: white;
+        }
+        .more-info{
+          font-family: "Katibeh", serif;
+          position: relative;
+          border: none;
+          width: 151px;
+          height: 41px;
+          top: 80px;
+          right: 50px;
+          background-color: #83D0FC;
+          color: black;
+          font-size: 25px;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .readmore-info{
+          font-family: "Katibeh", serif;
+          position: relative;
+          border: none;
+          width: 151px;
+          height: 60px;
+          top: 30px;
+          left: 70px;
+          background-color: #83D0FC;
+          color: black;
+          font-size: 25px;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+

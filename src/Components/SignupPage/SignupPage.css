@@ -64,18 +64,23 @@ h2{
     box-shadow: 36px 36px 100px 0px #00000040;
     border-radius: 10px;
 }
-.login-btn{
-    margin-top: 20px;
-    color: black;
-    align-items: center;
-    text-align: center;
-}
 .nav-buttons{
     margin: auto;
 }
-.login-btn{
+.signup-btn{
     position: relative;
+    top: 20px;
     left: 150px;
+    font-family: "Katibeh", serif;
+    font-size: 35px;
+    vertical-align: middle;
+    width: 180px;
+    height: 79px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
     
 }
 h4{
