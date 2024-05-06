@@ -1,5 +1,5 @@
 .block{
-    background:green ;
+    background:#089930 ;
     position: relative;
     width: 800px;
     height: 600px;
@@ -78,7 +78,7 @@ h2{
     height: 79px;
     border-radius: 10px;
     border: none;
-    background-color: green;
+    background-color: #089930;
     color: white;
     cursor: pointer;
     

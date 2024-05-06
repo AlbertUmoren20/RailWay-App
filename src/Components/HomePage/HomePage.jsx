@@ -21,6 +21,9 @@ const RegisterPageClick = () => {
 const SignupPageClick = () => {
   navigate('/Signup');
 };
+const BookRideClick = () => {
+  navigate('/bookride')
+}
   return (
     <div className='home-container'>
       <div className='navbar'>
@@ -32,7 +35,8 @@ const SignupPageClick = () => {
         }
       } alt=''> 
       </img>
-      <h1>Gilbert<br/> Railway Corporation</h1>
+      <h1 style={{
+      }}>Gilbert<br/> Railway Corporation</h1>
       </div>
       <div className='nav-buttons'>
      
@@ -50,7 +54,7 @@ const SignupPageClick = () => {
        </h2>
       </div>
       <div className='home-iconlinks'>
-      <div className='bookride homeicon'>
+      <div className='bookride homeicon' onClick={BookRideClick}>
       <img src={logo1} style={{
         width: '45px',
         height: '45px'
@@ -58,7 +62,7 @@ const SignupPageClick = () => {
       />
       <h5>Book Ride</h5>
       </div>
-      <div className='faq homeicon'>
+      <div className='faq homeicon' >
       <img src={logo2} style={{
         width: '45px',
         height: '45px'
@@ -119,9 +123,12 @@ const SignupPageClick = () => {
       </div>
       <div className='block2'>
       <h4>Terms and Condition</h4>
-      <hr className='linethrough'></hr>
+      <hr className='linethrough' style={{
+        backgroundColor: '#27374D'
+      }}></hr>
       <button className='readmore-info'>Read more</button>
       <img src={logo5} style={{
+        color: 'white',
        width: '94px',
        height: '93px',
        position: 'relative',
