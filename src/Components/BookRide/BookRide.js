@@ -5,17 +5,9 @@ import logo9 from "../Assets/Images/arrow-up.png"
 import search from "../Assets/Images/search.png"
 import arrowDown from "../Assets/Images/donw-arrow.png"
 
+
+
 const BookRide = () => {
-    const [showDropdown, setShowDropdown] = useState(false);
-   
-    const handleImageClick = () => {
-      setShowDropdown(!showDropdown);
-      console.log(showDropdown)
-    }
-    const handleItemClick = (event) => {
-      event.preventDefault();
-      setShowDropdown(false);
-    }   
   return (
     <div className='container'>
        <div className='heading'>
@@ -65,45 +57,9 @@ const BookRide = () => {
           height: '420px',
         }}>
 
-        <div className='desire-dest' 
-        style={
-          {
-          // backgroundColor: 'white',
-          // width: '400px',
-          // height: '120px',
-          // margin: 'auto',
-          // marginTop: '20px',
-          // alignItems: 'center',
-         
-          // borderRadius: '10px',
-          // padding: 'opx',
-          // placeItems: 'center',
-        }
-      } 
-      >
-      <input 
-      form='dropdown' 
-      className='dropdown' 
-      type='dropdown' 
-      placeholder='Desired Destination'
-       style={
-        {
-        width: '400px',
-        height: '120px',
-        margin: 'auto',
-        marginLeft: '170px',
-        marginTop: '10px',
-        borderRadius: '10px',
-        border: 'none',
-        fontSize: '50px',
-        textAlign: 'center',
-        // padding: '10px',
-        fontFamily: 'katibeh',
-        boxShadow: '35px 35px 100px 0px #00000080'
-      }
-    }>
-    
-    </input>
+        <div className='dropdown'>
+      
+        
         </div>
 
         <div className='LGA' style={{
@@ -132,6 +88,7 @@ const BookRide = () => {
            left: '30px'
         }}></img>
         </div>
+        
         <div className='search' style={{
           backgroundColor: 'white',
           width: '250px',

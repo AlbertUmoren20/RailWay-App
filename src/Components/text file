@@ -85,3 +85,56 @@
 //     height: 60px;
 //     color: white;
 // }
+
+
+
+
+
+//Styling the input page in Desired destination
+<!-- <input 
+   form='dropdown'
+    className='dropdown' 
+      type='dropdown' 
+      placeholder='Desired Destination'
+       style={
+        {
+        width: '400px',
+        height: '120px',
+        margin: 'auto',
+        marginLeft: '170px',
+        marginTop: '10px',
+        borderRadius: '10px',
+        border: 'none',
+        fontSize: '50px',
+        textAlign: 'center',
+        padding: '10px',
+        fontFamily: 'katibeh',
+        boxShadow: '35px 35px 100px 0px #00000080'
+      }
+    }>
+    
+    </input> -->
+
+
+    <div className='contact-inputpage'>  
+      <h3>Send us a Message</h3>
+      <p>hjshjddw jsdjwdbei jbdjsbdi sjdbhdi sdbsdjwbu sdbwj jhxabxja ekfnkenfk </p>
+      <input 
+      className='contact-input-name'
+      type='text'
+      name='username'
+      placeholder= 'Enter your name'
+      />
+      <input 
+      className='contact-input-email'
+      type='email'
+      name='email'
+      placeholder= 'Enter your Email'
+      />
+      <input 
+      className='contact-input-Message'
+      type='message'
+      name='message'
+      placeholder= 'Enter your message'
+      />
+      </div>

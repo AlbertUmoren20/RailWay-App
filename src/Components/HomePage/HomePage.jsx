@@ -24,6 +24,12 @@ const SignupPageClick = () => {
 const BookRideClick = () => {
   navigate('/bookride')
 }
+const FaqClick = () => {
+  navigate('/faq')
+}
+const contactusClick = () => {
+  navigate ('/contactus')
+}
   return (
     <div className='home-container'>
       <div className='navbar'>
@@ -62,7 +68,7 @@ const BookRideClick = () => {
       />
       <h5>Book Ride</h5>
       </div>
-      <div className='faq homeicon' >
+      <div className='f-a-q homeicon' onClick={FaqClick}>
       <img src={logo2} style={{
         width: '45px',
         height: '45px'
@@ -70,7 +76,7 @@ const BookRideClick = () => {
       />
       <h5>FAQ</h5>
       </div>
-      <div className='contac-us homeicon'>
+      <div className='contac-us homeicon' onClick={contactusClick}>
       <img src={logo3} style={{
         width: '45px',
         height: '45px'

@@ -1,0 +1,81 @@
+.contact-body{
+    background-color: white;
+    margin: auto;
+    position: relative;
+    width:1000px;
+    height: 660px;
+    margin-top: 100px;
+    box-shadow: -35px 0px 50px 0px #00000040 ;
+}
+.contact-sections{
+    display: flex;
+    padding: 20px;
+}
+.contact-icons-text{
+    /* background-color: green; */
+    width: 300px;
+    height: 550px;
+}
+
+.contact-address{
+    font-family: 'katibeh';
+    background-color: white;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.contact-number{
+    font-family: 'katibeh';
+    background-color: white;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+ 
+.contact-email{
+    font-family: 'katibeh';
+    background-color: white;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.contact-inputpage{
+    /* background-color: aqua; */
+    width: 600px;
+    /* padding: 10px; */
+}
+.contact-input-name{
+    height: 70px;
+    font-size: 40px;
+    font-family: 'katibeh';
+}
+.contact-input-email{
+    height: 70px;
+    font-size: 40px;
+    font-family: 'katibeh';
+}
+.contact-input-Message{
+    height: 150px;
+    font-size: 40px;
+    font-family: 'katibeh';
+}
+.contact-btn{
+        width: 150px;
+        height: 70px;
+        margin-top: 10px;
+        border: none;
+        color: white;
+        font-family: "katibeh";
+        font-size: 30px;
+        background-color: #089930;
+        cursor: pointer;
+}
+.contact-btn:hover{
+    background-color: black;
+    color: white;
+}
