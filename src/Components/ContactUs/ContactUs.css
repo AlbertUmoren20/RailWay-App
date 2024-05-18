@@ -74,6 +74,7 @@
         font-size: 30px;
         background-color: #089930;
         cursor: pointer;
+        border-radius: 10px;
 }
 .contact-btn:hover{
     background-color: black;

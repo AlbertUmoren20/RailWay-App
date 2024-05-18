@@ -8,17 +8,17 @@
     /* align-items: center; */
 }
 
-.dropdown-toggle {
+/*.dropdown-toggle {
     background-color: white;
     color: white;
     /* padding: 5px 10px; */
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+ /*   border: none;*/
+    /* border-radius: 5px; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+  /* }   */
   
-  .dropdown-menu {
+ /* .dropdown-menu {
     margin-top: -105px;
     padding: 25px;
     width: 150px;
@@ -43,4 +43,7 @@
   
   .dropdown-item:hover {
     background-color: #f5f5f5;
-  }
+ }  */
+ .input-ride-details{
+  background-color: aqua;
+ }

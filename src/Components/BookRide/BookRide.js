@@ -1,13 +1,48 @@
 import React, { useState } from 'react';
+import ReactDatePicker from 'react-datepicker';
 import { Dropdown, DropdownButton, DropdownItem } from 'react-bootstrap';
 import './BookRide.css'
+import 'react-datepicker/dist/react-datepicker.module.css'
 import logo9 from "../Assets/Images/arrow-up.png"
 import search from "../Assets/Images/search.png"
 import arrowDown from "../Assets/Images/donw-arrow.png"
-
+import { FaCalendarAlt } from 'react-icons/fa';
 
 
 const BookRide = () => {
+  const [destination, setDestination] = useState('');
+  const [currentLGA, setCurrentLGA] = useState('');
+  const [selectedDate, setSelectDate] = useState(null);
+  const [selectedClass, setSelectedClass] = useState('');
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+
+  const bookRideData = {
+    destination,
+    currentLGA,
+    // selectedDate,
+    selectedClass,
+  };
+
+  localStorage.setItem('bookRideData', JSON.stringify(bookRideData));
+  console.log('Book Ride:', bookRideData)// Log Data to console
+}
+
+function CustomInput({value, onClick}) {
+   return(
+    <div className='input-container'>
+    <input type='text' className='' value={value} onClick={onClick} readOnly></input>
+    <div className='date-image-click'>
+    <div className='input-image'>
+    <FaCalendarAlt/>
+    </div>
+    </div>
+    </div>
+   )
+}
+  
   return (
     <div className='container'>
        <div className='heading'>
@@ -62,7 +97,8 @@ const BookRide = () => {
         
         </div>
 
-        <div className='LGA' style={{
+        {
+          /* <div className='LGA' style={{
           backgroundColor: 'white',
           width: '500px',
           height: '120px',
@@ -88,7 +124,7 @@ const BookRide = () => {
            left: '30px'
         }}></img>
         </div>
-        
+      
         <div className='search' style={{
           backgroundColor: 'white',
           width: '250px',
@@ -106,7 +142,48 @@ const BookRide = () => {
           fontSize: '45px',
           // padding: '0px'
         }}>Search</h2>
-        </div>
+      </div> */
+    }
+
+      <div className='input-ride-details'>
+     <div className='destination'> 
+     <select value={destination} onChange={(e) => setDestination(e.target.value)}>
+      <option value=''>--Select Destination</option>
+      <option value='Lagos'>Lagos</option>
+      <option value='Abuja'>Abuja</option>
+      <option value='Ibadan'>Ibadan</option>
+      </select>
+      </div>
+
+     <div className='current-lga'>
+     <select value={currentLGA} onChange={(e) => setCurrentLGA(e.target.value)}>
+      <option value=''>--Current LGA --</option>
+      <option value='Ibadan'>Ibadan</option>
+      <option value='Akure'>Akure</option>
+      <option value='Osun'>Osun</option>
+      </select>
+      </div>
+
+      <div className='select-class'>
+      <select value={selectedClass} onChange={(e) => setSelectedClass(e.target.value)}>
+      <option value=''></option>
+      <option value='First class'>First Class</option>
+      <option value='Second class'>Second Class</option>
+      <option value='Third Class'>Third Class</option>
+      </select>
+      </div>
+
+      <div className='calendar'>
+      <label>
+      <ReactDatePicker 
+      selected={selectedDate}
+      onChange={date=>setSelectDate(date)} customInput={<CustomInput/>}/></label>
+      </div>
+      <button className='bookride-btn' onClick={handleSubmit}>Find A Train</button>
+      
+      </div>
+      
+
         </div>
         </div>
         </div>
