@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../Assets/Images/railway-logo.png"
 import LoginSignup from '../RegisterPage/RegisterPage'
 import "./HomePage.css"
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import logo1 from "../Assets/Images/book-ride.png"
 import logo2 from "../Assets/Images/faq.png"
 import logo3 from "../Assets/Images/contact us.png"
@@ -13,7 +13,9 @@ import logo7 from "../Assets/Images/schedule.png"
 import logo8 from "../Assets/Images/tickets1.png"
 
 const HomePage = () => {
-const navigate = useNavigate();
+  const location = useLocation();
+  const fullName = new URLSearchParams(location.search).get("fullName");
+ const navigate = useNavigate();
 
 const RegisterPageClick = () => {
   navigate('/Register');
@@ -42,7 +44,7 @@ const contactusClick = () => {
       } alt=''> 
       </img>
       <h1 style={{
-      }}>Gilbert<br/> Railway Corporation</h1>
+      }}>{fullName}<br/> Railway Corporation</h1>
       </div>
       <div className='nav-buttons'>
      

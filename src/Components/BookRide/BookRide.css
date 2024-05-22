@@ -45,5 +45,99 @@
     background-color: #f5f5f5;
  }  */
  .input-ride-details{
+  /* background-color: aqua; */
+  height: 420px;
+  display: flex;
+  /* padding: 20px; */
+ }
+ .ride-details-container{
   background-color: aqua;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 400px;
+  left: 400px;
+  z-index: 1;
+ }
+ .destination-container{
+  /* padding: 20px; */
+  /* background-color: green; */
+  width: 275px;
+  height: 206px;
+  padding: 10px;
+  margin-right: 130px;
+  /* margin-left: 0px; */
+  /* text-align: center; */
+  
+ }
+ .select-destination{
+  font-family: 'katibeh';
+  width: 275px;
+  height: 90px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 100px 0px #00000080;
+ }
+ .residential-container{
+  width: 275px;
+  height: 206px;
+  padding: 10px;
+ }
+ .calendar{
+  /* background-color: aqua; */
+  width: 200px;
+  height: 90px;
+  margin-top: -130px;
+ }
+ .input-container{
+  /* background-color: aqua; */
+  margin-bottom: 10px;
+   }
+ .input-image{
+  width: 46px;
+  height: 43px;
+ }
+ .select-datetext{
+  height: 70px;
+  width: 275px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 35px 35px 100px 0px #00000080;
+ }
+ .facalendar{
+  font-size: 30px;
+  position: relative;
+  left: 240px;
+  bottom: 50px;
+  cursor: pointer;
+ }
+ .react-datepicker__input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: -120px;
+ }
+ .select-class{
+  /* background-color: aqua; */
+  width: 200px;
+  height: 70px;
+ }
+ .class-container{
+  margin-left: 450px;
+  margin-top: -175px;
+ }
+ .bookride-btn{
+  font-family: 'katibeh';
+  font-size: 25px;
+  border: none;
+  position: relative;
+  left: 300px;
+  top: 20px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  background-color: #089930;
+  color: white;
  }

@@ -4,12 +4,13 @@ import Img from '../Assets/Images/railway-logo.png'
 import { useNavigate } from 'react-router-dom';
 
 const SignupPage = () => {
-
-
     const navigate = useNavigate();
     const RegisterPageClick = () => {
      navigate('/Register');
 };
+const HomepageClick = () => {
+    navigate('/homepage');
+   }
 
 
     const [fullName, setFullName] = useState('');
@@ -39,6 +40,7 @@ const SignupPage = () => {
 
         console.log('Form data:', userData)// Log Data to console
     }
+
   return (
     <div className="signup-container">
         <div className="logo-title">

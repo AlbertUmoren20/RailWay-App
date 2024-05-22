@@ -14,6 +14,7 @@ const BookRide = () => {
   const [currentLGA, setCurrentLGA] = useState('');
   const [selectedDate, setSelectDate] = useState(null);
   const [selectedClass, setSelectedClass] = useState('');
+ 
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -32,11 +33,15 @@ const BookRide = () => {
 
 function CustomInput({value, onClick}) {
    return(
-    <div className='input-container'>
-    <input type='text' className='' value={value} onClick={onClick} readOnly></input>
-    <div className='date-image-click'>
+    <div className='input-container '>
+    <h3 style={{
+      fontFamily: 'katibeh',
+      fontSize: '30px',
+    }}>Select Date</h3>
+    <input type='text' className='select-datetext' value={value} onClick={onClick} readOnly></input>
+    <div className='date-image-click'> 
     <div className='input-image'>
-    <FaCalendarAlt/>
+    <FaCalendarAlt className='facalendar'/>
     </div>
     </div>
     </div>
@@ -46,6 +51,14 @@ function CustomInput({value, onClick}) {
   return (
     <div className='container'>
        <div className='heading'>
+      {/* <div className='ride-details-container'>
+       <p>Train Available from</p>
+       <p>lorem ipsum svhvhd bhsvdy sbsb sdbjsd</p>
+       <div className='button-ride-details'>
+       <button className='button-back'>Back</button>
+       <button className='button-proceed'>Proceed</button>
+       </div>*
+  </div> */}
           <h3 className='book-ride-text' style={{
             fontFamily: 'katibeh',
             fontSize: '40px'
@@ -67,37 +80,19 @@ function CustomInput({value, onClick}) {
             }
           } alt=''> 
           </img>
-          <img src={search}
-           style={
-            {
-            position: 'relative',
-            left: '1500px',
-            bottom: '70px',
-            width: '60px',
-            height: '59px',
-            backgroundColor: 'green',
-            borderRadius: '50px',
-            cursor: 'pointer'
-          }
-        } alt=''>
-          </img>
           </div>
         </div>
         <div className='block' style={{
           height: '500px',
-          backgroundColor: '#089930'
+          backgroundColor: '#089930',
+          borderRadius: '10px'
           // marginBottom: '10px'
         }}>
         <div className='cont' style={{
           height: '420px',
+          borderRadius: '10px'
         }}>
-
-        <div className='dropdown'>
-      
-        
-        </div>
-
-        {
+  {
           /* <div className='LGA' style={{
           backgroundColor: 'white',
           width: '500px',
@@ -146,44 +141,121 @@ function CustomInput({value, onClick}) {
     }
 
       <div className='input-ride-details'>
-     <div className='destination'> 
-     <select value={destination} onChange={(e) => setDestination(e.target.value)}>
-      <option value=''>--Select Destination</option>
-      <option value='Lagos'>Lagos</option>
-      <option value='Abuja'>Abuja</option>
-      <option value='Ibadan'>Ibadan</option>
+      
+      <div className='destination-container'> 
+      <h3 style={{
+        fontFamily: 'katibeh',
+        fontSize: '30px',
+        marginBottom: '10px',
+        marginTop: '0px'
+      }}>Desired Destination</h3>
+     <select className='select-destination' value={destination} onChange={(e) => setDestination(e.target.value)}>
+      <option value=''></option>
+      <option value='Lagos' style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Lagos</option>
+      <option value='Abuja' style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Abuja</option>
+      <option value='Ibadan'style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Ibadan</option>
       </select>
       </div>
 
-     <div className='current-lga'>
+
+      <div className='residential-container'> 
+      <h3 style={{
+        fontFamily: 'katibeh',
+        fontSize: '30px',
+        marginBottom: '10px',
+        marginTop: '0px'
+      }}>Current Residential LGA</h3>
+     <select className='select-destination' value={currentLGA} onChange={(e) => setCurrentLGA(e.target.value)}>
+     <option value=''></option>
+     <option value='Akure' style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Akure</option>
+      <option value='Jos' style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Jos</option>
+      <option value='Imo' style={{
+        fontSize: '30px'
+      }}>Wole Soyinka Imo</option>
+      </select>
+      </div>
+      </div>
+
+      {/* <div className='class-container'> 
+      <h3 style={{
+        fontFamily: 'katibeh',
+        fontSize: '30px',
+        marginBottom: '10px',
+        marginTop: '0px'
+      }}>Select Class</h3>
+     <select className='select-destination' value={destination} onChange={(e) => setDestination(e.target.value)}>
+      <option value=''></option>
+      <option value='Lagos' style={{
+        fontSize: '25px'
+      }}>WoleSoyinka  Lagos</option>
+      <option value='Abuja'>Wole Soyinka Abuja</option>
+      <option value='Ibadan'>Wole Soyinka Ibadan</option>
+      </select>
+      </div>
+
+
+     {/*<div className='current-lga'>
      <select value={currentLGA} onChange={(e) => setCurrentLGA(e.target.value)}>
       <option value=''>--Current LGA --</option>
       <option value='Ibadan'>Ibadan</option>
       <option value='Akure'>Akure</option>
       <option value='Osun'>Osun</option>
       </select>
-      </div>
+      </div> */}
+      
+     
 
-      <div className='select-class'>
+     {/*<div className='select-class'>
       <select value={selectedClass} onChange={(e) => setSelectedClass(e.target.value)}>
       <option value=''></option>
       <option value='First class'>First Class</option>
       <option value='Second class'>Second Class</option>
       <option value='Third Class'>Third Class</option>
       </select>
-      </div>
-
-      <div className='calendar'>
+      </div>  
+    */}
+    <div className='calendar'>
       <label>
       <ReactDatePicker 
       selected={selectedDate}
       onChange={date=>setSelectDate(date)} customInput={<CustomInput/>}/></label>
-      </div>
-      <button className='bookride-btn' onClick={handleSubmit}>Find A Train</button>
-      
-      </div>
-      
+  </div>  
 
+ {/* <div className='select-class'>
+      <select value={selectedClass} onChange={(e) => setSelectedClass(e.target.value)}>
+      <option value=''></option>
+      <option value='First class'>First Class</option>
+      <option value='Second class'>Second Class</option>
+      <option value='Third Class'>Third Class</option>
+      </select>
+  </div> */}
+  <div className='class-container'> 
+      <h3 style={{
+        fontFamily: 'katibeh',
+        fontSize: '30px',
+        marginBottom: '10px',
+        marginTop: '0px'
+      }}>Select Class</h3>
+     <select className='select-destination' value={selectedClass} onChange={(e) => setSelectedClass(e.target.value)}>
+      <option value=''></option>
+      <option value='first-class' style={{
+        fontSize: '25px'
+      }}>First Class</option>
+      <option value='second-class'>second class</option>
+      <option value='third-class'>third class</option>
+      </select>
+      </div>
+    <button className='bookride-btn' onClick={handleSubmit}>Find A Train</button>
         </div>
         </div>
         </div>

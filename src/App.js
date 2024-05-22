@@ -7,18 +7,21 @@ import SignupPage from './Components/SignupPage/SignupPage';
 import BookRide from './Components/BookRide/BookRide';
 import Faq from './Components/FAQ/Faq';
 import ContactUs from './Components/ContactUs/ContactUs';
+import PayStackIntegration from './Components/PayStackIntegration/PayStackIntegration';
  
 
 function App() {
   return (
     <Router>
     <Routes>
-    <Route path='/' element={<HomePage/>}/>
-    <Route path='/Register' element={<RegisterPage/>}/>
+    <Route path='/' element={<RegisterPage/>}/>
     <Route path='/Signup' element={<SignupPage/>} />
+    <Route path='/homepage' element={<HomePage/>}/>
     <Route path='/bookride' element={<BookRide/>} />
     <Route path='/faq' element={<Faq/>} />
     <Route path='/contactus' element={<ContactUs/>} />
+    <Route path='/payment' element={<PayStackIntegration/>} />
+  
     </Routes>
 
     </Router>
