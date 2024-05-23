@@ -8,6 +8,7 @@ import BookRide from './Components/BookRide/BookRide';
 import Faq from './Components/FAQ/Faq';
 import ContactUs from './Components/ContactUs/ContactUs';
 import PayStackIntegration from './Components/PayStackIntegration/PayStackIntegration';
+import UserPage from './Components/UserPage/UserPage';
  
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path='/' element={<RegisterPage/>}/>
     <Route path='/Signup' element={<SignupPage/>} />
     <Route path='/homepage' element={<HomePage/>}/>
+    <Route path='/user' element={<UserPage/>}/>
     <Route path='/bookride' element={<BookRide/>} />
     <Route path='/faq' element={<Faq/>} />
     <Route path='/contactus' element={<ContactUs/>} />

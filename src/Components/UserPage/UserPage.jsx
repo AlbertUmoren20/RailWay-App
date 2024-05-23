@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from "../Assets/Images/railway-logo.png"
 import LoginSignup from '../RegisterPage/RegisterPage'
-import "./HomePage.css"
+import "./UserPage.css"
 import "../RegisterPage/RegisterPage"
 import { useLocation, useNavigate } from 'react-router-dom'
 import logo1 from "../Assets/Images/book-ride.png"
@@ -12,9 +12,9 @@ import logo5 from "../Assets/Images/privacy.png"
 import logo6 from "../Assets/Images/timetable.png"
 import logo7 from "../Assets/Images/schedule.png"
 import logo8 from "../Assets/Images/tickets1.png"
+import { FaCaretDown } from 'react-icons/fa'; 
 
-const HomePage = () => {
-
+const UserPage = () => {
   const location = useLocation();
   const fullName = new URLSearchParams(location.search).get("fullName");
  const navigate = useNavigate();
@@ -34,6 +34,7 @@ const FaqClick = () => {
 const contactusClick = () => {
   navigate ('/contactus')
 }
+
   return (
     <div className='home-container'>
       <div className='navbar'>
@@ -48,12 +49,23 @@ const contactusClick = () => {
       <h1 style={{
       }}>Gilbert<br/> Railway Corporation</h1>
       </div>
-      <div className='nav-buttons'>
-      <button className='home-register-btn' onClick={RegisterPageClick}>Register</button>
-      <button className='home-signup-btn' onClick={SignupPageClick}>Signup</button>
+      <div className='username-logout' style={{
+        display: 'flex',
+        cursor: 'pointer'
+      }}>
+      <h2 style={{
+       position: 'relative',
+       right: '100px'
+      }}>{fullName}</h2>
+      <FaCaretDown style={{
+        position: 'relative',
+        right: '90px',
+        top: '27px',
+        fontSize: '25px'
+      }}/>
+      </div>
       </div>
 
-      </div>
       <div className='heading-text'>
       <h2 className='home-text'>
       Welcome to Gilbert Railway Corporation (GRC), 
@@ -113,6 +125,8 @@ const contactusClick = () => {
       
       </div>
       <hr></hr>
+
+
       <div className='block-elements'>
       <div className='block1'>
       <h4>Changes to train time</h4>
@@ -167,4 +181,4 @@ const contactusClick = () => {
   )
 }
 
-export default HomePage
+export default UserPage

@@ -3,7 +3,6 @@ import "./PayStackIntegration.css"
 import PayStackPop from '@paystack/inline-js'
 
 const PayStackIntegration = () => { 
-
 const [email, setEmail] = useState("");
 const [amount, setAmount] = useState("");
 const [phoneNumber, setphoneNumber] = useState("");

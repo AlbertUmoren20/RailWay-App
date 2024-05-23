@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 
 const RegisterPage = () => { 
+  const [isRegistered, setIsRegistered] = useState(false);
+
    const navigate = useNavigate();
     const SignupPageClick = () => {
      navigate('/Signup');
@@ -26,7 +28,7 @@ const RegisterPage = () => {
       if(formData.fullName && formData.nin && formData.password) {
         localStorage.setItem('formData', JSON.stringify(formData));
         console.log('Form Submitted Successfully!', formData);
-        navigate(`/homepage?fullName=${formData.fullName}`); //Redirect to a new page
+        navigate(`/user?fullName=${formData.fullName}`); //Redirect to a new page
       }
       else{
         // console.error('Invalid form data!');
