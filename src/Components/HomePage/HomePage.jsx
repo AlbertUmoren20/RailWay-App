@@ -62,7 +62,7 @@ const contactusClick = () => {
        </h2>
       </div>
       <div className='home-iconlinks'>
-      <div className='bookride homeicon' onClick={BookRideClick}>
+      <div className='bookride homeicon' >
       <img src={logo1} style={{
         width: '45px',
         height: '45px'
@@ -70,7 +70,7 @@ const contactusClick = () => {
       />
       <h5>Book Ride</h5>
       </div>
-      <div className='f-a-q homeicon' onClick={FaqClick}>
+      <div className='f-a-q homeicon'>
       <img src={logo2} style={{
         width: '45px',
         height: '45px'
@@ -78,7 +78,7 @@ const contactusClick = () => {
       />
       <h5>FAQ</h5>
       </div>
-      <div className='contac-us homeicon' onClick={contactusClick}>
+      <div className='contac-us homeicon' >
       <img src={logo3} style={{
         width: '45px',
         height: '45px'

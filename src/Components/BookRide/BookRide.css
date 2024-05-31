@@ -53,8 +53,8 @@
  .ride-details-container{
   background-color: aqua;
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 200px;
+  height: 200px;
   top: 400px;
   left: 400px;
   z-index: 1;
@@ -65,6 +65,8 @@
   width: 275px;
   height: 206px;
   padding: 10px;
+  position: relative;
+  left: 30px;
   margin-right: 130px;
   /* margin-left: 0px; */
   /* text-align: center; */
@@ -84,6 +86,7 @@
   width: 275px;
   height: 206px;
   padding: 10px;
+  margin-left: 60px;
  }
  .calendar{
   /* background-color: aqua; */
@@ -93,15 +96,19 @@
  }
  .input-container{
   /* background-color: aqua; */
-  margin-bottom: 10px;
+  position: relative;
+  left: 30px;
+  margin-top: 50px;
    }
  .input-image{
   width: 46px;
   height: 43px;
  }
  .select-datetext{
-  height: 70px;
+  height: 90px;
   width: 275px;
+  font-family: 'katibeh';
+  font-size: 40px;
   border-radius: 5px;
   border: none;
   box-shadow: 35px 35px 100px 0px #00000080;
@@ -110,7 +117,7 @@
   font-size: 30px;
   position: relative;
   left: 240px;
-  bottom: 50px;
+  bottom: 60px;
   cursor: pointer;
  }
  .react-datepicker__input-container {
@@ -125,16 +132,16 @@
   height: 70px;
  }
  .class-container{
-  margin-left: 450px;
-  margin-top: -175px;
+  margin-left: 500px;
+  margin-top: -155px;
  }
  .bookride-btn{
   font-family: 'katibeh';
   font-size: 25px;
   border: none;
   position: relative;
-  left: 300px;
-  top: 20px;
+  left: 350px;
+  top: 30px;
   width: 120px;
   height: 60px;
   cursor: pointer;

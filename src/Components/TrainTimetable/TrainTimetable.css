@@ -1,0 +1,42 @@
+.container {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .timetable-form {
+    display: table; /* Change to table for table layout */
+  }
+  
+  .train-list {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .train-list th,
+  .train-list td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .train-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .traintable-body tr:nth-child(even) {
+    background-color: #fbfbfb;
+  }
+  
+  /* New styles for table layout */
+  .train-item {
+    display: table-row; /* Each train info as a table row */
+  }
+  
+  .train-item > td { /* Target all children of train-item */
+    display: table-cell; /* Each child as a table cell */
+    padding: 1rem; /* Adjust padding here if needed */
+    vertical-align: top; /* Align content at the top */
+  }
+
+  

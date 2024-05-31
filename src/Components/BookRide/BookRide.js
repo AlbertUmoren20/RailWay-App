@@ -18,12 +18,10 @@ const BookRide = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-
   const bookRideData = {
     destination,
     currentLGA,
-    // selectedDate,
+    selectedDate,
     selectedClass,
   };
 
@@ -34,16 +32,27 @@ const BookRide = () => {
 function CustomInput({value, onClick}) {
    return(
     <div className='input-container '>
+     {/*
+         <div className='ride-details-container'>
+       <p>Train Available from</p>
+       <p>lorem ipsum svhvhd bhsvdy sbsb sdbjsd</p>
+       <div className='button-ride-details'>
+       <button className='button-back'>Back</button>
+       <button className='button-proceed'>Proceed</button>
+       </div>
+      </div> */}
+      
     <h3 style={{
       fontFamily: 'katibeh',
       fontSize: '30px',
+      marginBottom: '10px'
     }}>Select Date</h3>
-    <input type='text' className='select-datetext' value={value} onClick={onClick} readOnly></input>
+    <input type='text' className='select-datetext' value={value} onClick={onClick} onChange={(e) => setSelectDate(e.target.value)} readOnly></input>
     <div className='date-image-click'> 
     <div className='input-image'>
     <FaCalendarAlt className='facalendar'/>
     </div>
-    </div>
+    </div> 
     </div>
    )
 }
@@ -51,17 +60,11 @@ function CustomInput({value, onClick}) {
   return (
     <div className='container'>
        <div className='heading'>
-      {/* <div className='ride-details-container'>
-       <p>Train Available from</p>
-       <p>lorem ipsum svhvhd bhsvdy sbsb sdbjsd</p>
-       <div className='button-ride-details'>
-       <button className='button-back'>Back</button>
-       <button className='button-proceed'>Proceed</button>
-       </div>*
-  </div> */}
+     
           <h3 className='book-ride-text' style={{
             fontFamily: 'katibeh',
-            fontSize: '40px'
+            fontSize: '40px',
+            marginBottom: '5px'
           }}>Welcome to <br></br>GRC<br></br> Book your train ride here </h3>
           <div className='images' style={{
             width: '0px',
@@ -83,13 +86,15 @@ function CustomInput({value, onClick}) {
           </div>
         </div>
         <div className='block' style={{
-          height: '500px',
+          marginBottom: '50px',
+          height: '550px',
+          width: '900px',
           backgroundColor: '#089930',
           borderRadius: '10px'
-          // marginBottom: '10px'
         }}>
         <div className='cont' style={{
-          height: '420px',
+          height: '460px',
+          width: '800px',
           borderRadius: '10px'
         }}>
   {
@@ -141,7 +146,6 @@ function CustomInput({value, onClick}) {
     }
 
       <div className='input-ride-details'>
-      
       <div className='destination-container'> 
       <h3 style={{
         fontFamily: 'katibeh',
@@ -169,7 +173,7 @@ function CustomInput({value, onClick}) {
         fontFamily: 'katibeh',
         fontSize: '30px',
         marginBottom: '10px',
-        marginTop: '0px'
+        marginTop: '0px',
       }}>Current Residential LGA</h3>
      <select className='select-destination' value={currentLGA} onChange={(e) => setCurrentLGA(e.target.value)}>
      <option value=''></option>
@@ -248,11 +252,9 @@ function CustomInput({value, onClick}) {
       }}>Select Class</h3>
      <select className='select-destination' value={selectedClass} onChange={(e) => setSelectedClass(e.target.value)}>
       <option value=''></option>
-      <option value='first-class' style={{
-        fontSize: '25px'
-      }}>First Class</option>
-      <option value='second-class'>second class</option>
-      <option value='third-class'>third class</option>
+      <option value='first-class'>First Class</option>
+      <option value='second-class'>Second Class</option>
+      <option value='third-class'>Third Class</option>
       </select>
       </div>
     <button className='bookride-btn' onClick={handleSubmit}>Find A Train</button>

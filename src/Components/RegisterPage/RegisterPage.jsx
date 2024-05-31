@@ -6,44 +6,57 @@ import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => { 
   const [isRegistered, setIsRegistered] = useState(false);
+  const[fullName, setfullName] = useState("")
+  const[email, setemail] = useState("")
+  const[password, setpassword] = useState("")
 
    const navigate = useNavigate();
     const SignupPageClick = () => {
      navigate('/Signup');
+    
 };
+const UserPageClick = () => {
+navigate('/user');
+};
+ 
      {/*const HomepageClick = () => {
       navigate('/homepage');
      }
     */}
 
-    const [formData, setFormData] = useState({
-      fullName: '',
-      nin: '',
-      password: ''
-    }) 
 
 
      const handleSubmit = (event) => {
       event.preventDefault();
-      if(formData.fullName && formData.nin && formData.password) {
-        localStorage.setItem('formData', JSON.stringify(formData));
-        console.log('Form Submitted Successfully!', formData);
-        navigate(`/user?fullName=${formData.fullName}`); //Redirect to a new page
-      }
-      else{
-        // console.error('Invalid form data!');
-      }
+      const railwayusers = {fullName, email, password}
+        localStorage.setItem('railwayusers', JSON.stringify(railwayusers));
+        // console.log('Form Submitted Successfully!', formData);
+        try {
+           fetch("http://localhost:8080/railway/addUsers",
+        {
+          method: "POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(railwayusers)
+      }). then(() => {
+        console.log("New User Added")
+        navigate(`/user?fullName=${fullName}`); //Redirect to a new page
+      })
+        } catch (error) {
+          alert("There was an error while logging in")
+        }
+        
      };
+
     
-     const formchange = (event) => {
-       const {value,name} = event.target
-       setFormData((prev)=>{
-         return({
-           ...prev,
-           [name] : value
-         })
-       })
-     }
+    //  const formchange = (event) => {
+    //    const {value,name} = event.target
+    //    setFormData((prev)=>{
+    //      return({
+    //        ...prev,
+    //        [name] : value
+    //      })
+    //    })
+    //  }
 
 
     return(
@@ -62,30 +75,30 @@ const RegisterPage = () => {
         <div className="block">
         <div className="cont">
        <div> 
-       <form className="form-inputs" onClick={handleSubmit}  >
+       <form className="form-inputs" >
        <div className="input-field">
        <label htmlFor="fullName"></label>
        <input 
        type="text"
        className="fullName"
-       value={formData.fullName}
+       value={fullName}
        placeholder=" FULL NAME"
        name="fullName"
-       onChange={formchange}
-        required
+       onChange={(e) => setfullName(e.target.value)}
+      required
         />
        </div>
 
        <div className="input-field">
-       <label htmlFor="nin"></label>
+       <label htmlFor="email"></label>
        <input 
        type="text"
-       className="nin"
-       value={formData.nin}
-       onChange={formchange}
-       placeholder=" NIN"
-       name="nin"
-        required/>
+       className="email"
+       value={email}
+       onChange={(e) => setemail(e.target.value)}
+       placeholder=" EMAIL"
+       name="email"
+        required />
        </div>
        
        <div className="input-field">
@@ -93,14 +106,14 @@ const RegisterPage = () => {
        <input 
        type="password"
        className="password"
-       value={formData.password}
-       onChange={formchange}
+       value={password}
+       onChange={(e) => setpassword(e.target.value)}
        placeholder=" PASSWORD"
        name="password"
        required />
        </div>
        <div className='nav-buttons'>
-      <button className='register-btn'>Register</button>
+      <button className='register-btn' onClick={handleSubmit}>Register</button>
       </div>
        </form>
        </div>

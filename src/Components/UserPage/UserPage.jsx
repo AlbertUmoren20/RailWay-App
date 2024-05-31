@@ -34,6 +34,13 @@ const FaqClick = () => {
 const contactusClick = () => {
   navigate ('/contactus')
 }
+const HomePageClick = () => {
+  navigate ('/')
+}
+
+const TrainTimetableClick = () => {
+  navigate('/traintimetable')
+}
 
   return (
     <div className='home-container'>
@@ -49,22 +56,48 @@ const contactusClick = () => {
       <h1 style={{
       }}>Gilbert<br/> Railway Corporation</h1>
       </div>
-      <div className='username-logout' style={{
+      <div className='dropdown'>
+     <button className='btn-username-logout dropbtn' style={{
+      height: '70px',
+      width: '450px',
+      fontSize: '50px',
+      position: 'relative',
+      right: '100px',
+      padding: '0px',
+      fontFamily: 'katibeh',
+      placeItems: 'center',
+      border: 'none',
+      backgroundColor: 'white',
+      cursor: 'pointer'
+     }}>{fullName}
+     <FaCaretDown style={{
+      position: 'relative',
+      fontSize: '25px'
+     }}/>
+     </button>
+     <div className="dropdown-content">
+     <a onClick={TrainTimetableClick}>TRAIN TIMETABLE</a>
+     <a onClick={HomePageClick}>LOG OUT</a>
+     <a href="#"></a>
+     </div>
+     </div>
+      {/*<div className='username-logout' style={{
         display: 'flex',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        position: 'relative',
       }}>
       <h2 style={{
        position: 'relative',
-       right: '100px'
+       right: '100px',
       }}>{fullName}</h2>
       <FaCaretDown style={{
         position: 'relative',
         right: '90px',
         top: '27px',
-        fontSize: '25px'
+        fontSize: '25px',
       }}/>
-      </div>
-      </div>
+    </div> */}
+    </div> 
 
       <div className='heading-text'>
       <h2 className='home-text'>
