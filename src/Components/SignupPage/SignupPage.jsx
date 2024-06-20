@@ -13,15 +13,11 @@ const HomepageClick = () => {
    }
 
 
-    const [fullName, setFullName] = useState('');
-    const [railwayId, setRailwayId] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleFullNameChange(e) {
-        setFullName(e.target.value);
-    }
-    function handleRailwayIdChange(e) {
-        setRailwayId(e.target.value);
+    function handleEmailChange(e) {
+        setEmail(e.target.value);
     }
     function handlePasswordChange(e) {
         setPassword(e.target.value);
@@ -31,8 +27,7 @@ const HomepageClick = () => {
         event.preventDefault();
 
         const userData = {
-            fullName,
-            railwayId,
+            email,
             password,
         };
 
@@ -59,15 +54,14 @@ const HomepageClick = () => {
         <div className="cont">
        <div> 
        <form className="form-inputs">
-
        <div className="input-field">
-       <label htmlFor="fullName"></label>
+       <label htmlFor="email"></label>
        <input 
        type="text"
-       className="fullName"
-       placeholder=" FULL NAME"
-       value={fullName}
-       onChange={handleFullNameChange}
+       className="email"
+       placeholder=" EMAIL "
+       value={email}
+       onChange={handleEmailChange}
         required/>
        </div>
        
@@ -82,7 +76,7 @@ const HomepageClick = () => {
        required />
        </div>
 
-       <div className="input-field">
+     {/*   <div className="input-field">
        <label htmlFor="GRC ID"></label>
        <input 
        type="text"
@@ -92,6 +86,7 @@ const HomepageClick = () => {
        onChange={handleRailwayIdChange}
         required />
        </div>
+    */}
 
        <div className='nav-buttons'>
       <button className='signup-btn' onClick={handleSubmit}>Sign Up</button>

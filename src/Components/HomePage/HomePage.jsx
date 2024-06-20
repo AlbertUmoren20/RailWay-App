@@ -55,11 +55,14 @@ const contactusClick = () => {
 
       </div>
       <div className='heading-text'>
-      <h2 className='home-text'>
-      Welcome to Gilbert Railway Corporation (GRC), 
+     <marquee direction="left">
+     <h2 className='home-text'>
+       Welcome to Gilbert Railway Corporation (GRC), 
       an effecient and fast way to travel within Nigeria via trains.
        Select your train, the date of your journey, book your ticket and all is set.
        </h2>
+     </marquee>
+      
       </div>
       <div className='home-iconlinks'>
       <div className='bookride homeicon' >

@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./ContactUs.css"
 import { FaMap } from 'react-icons/fa'; 
 import { FaPhone } from 'react-icons/fa';
 import { FaMessage } from 'react-icons/fa6';
 
 
+
 const ContactUs = () => {
+  const [email, setEmail] = useState('');
+
+  const contactMessage = () => {
+    fetch(`http://localhost:8080/railway/contactUsEmail?email=${encodeURIComponent(email)}`)
+      .then(response => response.text())
+      .then(data => {
+        alert(data); // Display success message
+      })
+      .catch(error => {
+        console.error('Error sending email:', error);
+        alert('Failed to send email');
+      });
+  };
+
   return (
     <div className='contact-container'>
       <div className='contact-body'>
@@ -89,6 +104,8 @@ const ContactUs = () => {
       type='email'
       name='email'
       placeholder= 'Enter Your Email'
+      value={email}
+      onChange={e => setEmail(e.target.value)}
       required/>
       <input 
       className='contact-input-Message'
@@ -97,7 +114,7 @@ const ContactUs = () => {
       placeholder= 'Enter Your Message'
       required/>
       </div>
-      <button className='contact-btn'>Submit</button>
+      <button className='contact-btn' onClick={contactMessage}>Submit</button>
       </div>
       </div>
       </div>

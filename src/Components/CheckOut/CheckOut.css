@@ -1,0 +1,158 @@
+
+
+/* .logo-title{
+  margin-top: -43px;
+} */
+.checkout-container{
+  /* background-color: green; */
+  /* margin: auto; */
+  width: 800px;
+  height: 700px;
+  margin-top: 50px;
+
+}
+.checkout-left{
+  /* background-color: gray; */
+  width: 300px;
+  /* height: 4vh; */
+  padding: 10px;
+  text-align: center;
+}
+th, td {
+  padding: 20px;
+  font-family: 'katibeh';
+  font-size: 30px;
+
+  /* background-color: aqua; */
+}
+th{
+  background-color: rgb(224, 219, 219);
+}
+.select-coach{
+  font-size: 30px;
+  padding: 5px;
+  font-family: 'katibeh';
+  width: 150px;
+  height: 50px;
+}
+.seats-available{
+  font-size: 30px;
+  padding: 5px;
+  font-family: 'katibeh';
+  width: 150px;
+  height: 50px;
+}
+.price-section{
+background-color: antiquewhite;
+width: 300px;
+height: 300px;
+position: relative;
+bottom: 700px;
+left: 1200px;
+}
+.btn-payment{
+  height: 50px;
+  width: 300px;
+  position: relative;
+  left: 1200px;
+  bottom: 100px;
+}
+.checkout-box{
+  display: flex;
+  justify-content: space-evenly;
+}
+.price-checkout{
+  padding: 40px;
+  background-color:  rgb(224, 219, 219);
+  height: 400px;
+  width: 450px;
+  position: relative;
+  left: 750px;
+}
+.prc-box{
+  /* background-color: green; */
+  width: 450px;
+  /* text-align: center; */
+  height: 90px;
+}
+.prc{
+  font-family: 'katibeh';
+  font-size: 30px;
+  margin-right: 150px;
+}
+.price{
+  background-color: rgb(224, 219, 219);
+  border: none;
+  font-family: 'katibeh';
+  margin-top: 30px;
+  margin-left: 60px;
+  font-size: 30px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+.passenger-count{
+  background-color:  white;
+  font-family: 'katibeh';
+  margin-top: 30px;
+  font-size: 30px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+.fee-count{
+  background-color:  rgb(224, 219, 219);
+  border: none;
+  font-family: 'katibeh';
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 30px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+.total-btn{
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+.btn-payment{
+  cursor: pointer;
+  font-family: 'katibeh';
+  background-color:  #089930;
+  color: white;
+  font-size: 30px;
+}
+.btn-payment:hover{
+  background-color: black;
+}
+.popup{
+  background-color:white;
+  box-shadow: 35px 35px 100px 0px #00000080;
+  width: 500px;
+  height: 300px;
+ margin: auto;
+ bottom: 550px;
+ left: 500px;
+ position: relative;
+ font-family: 'katibeh';
+ font-size: 50px;
+ padding: 15px;
+ border-radius: 30px;
+
+}
+.close-button{
+  font-size: 100px;
+  position: relative;
+  bottom: 70px;
+  cursor: pointer;
+}
+.close-button:hover{
+  color: black;
+}
+.popup-content{
+  display: flex;
+  color:  #089930;
+} 

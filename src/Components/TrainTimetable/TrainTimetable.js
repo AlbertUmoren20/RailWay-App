@@ -32,22 +32,22 @@ const TrainTimetable = () => {
     return (
         
         <div className='container'>
-            <div className='timetable-form'>
-                <div className='train-list'>
-                    <h2>Train Timetable</h2>
+         <div className='timetable-form'>
+         <div className='train-list'>
+           <h2>Train Timetable</h2>
                     {trains.map(train => (
                         <div key={train.id} className='train-item'>
-                       
-                        
-                       <th>Sequence</th>
+                        <tr>
+                        <th>Sequence</th>
                        <th>Station Name</th>
                        <th>Arrival Time</th>
                        <th>Departure Time</th>
+                        </tr>
                         <tbody className='traintable-body'>
-                        <tr>{train.trainId}</tr>
-                        <td key={`station-${train.id}`}>{train.stationName}</td>
-                        <tr>{train.arrivaltime}</tr>
-                        <tr>{train.departureTime}</tr>
+                        <td>{train.trainId}</td>
+                        <td>{train.stationName}</td>
+                        <td>{train.arrivaltime}</td>
+                        <td>{train.departureTime}</td>
                         </tbody>
                               {/* <p>Station Name: {train.stationName}</p>
                             <p>Arrival Time: {train.arrivaltime}</p>

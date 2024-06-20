@@ -10,8 +10,9 @@ import ContactUs from './Components/ContactUs/ContactUs';
 import PayStackIntegration from './Components/PayStackIntegration/PayStackIntegration';
 import UserPage from './Components/UserPage/UserPage';
 import TrainTimetable from './Components/TrainTimetable/TrainTimetable';
+import CheckOut from './Components/CheckOut/CheckOut';
+import UsersTickets from './Components/UsersTickets/UsersTickets';
  
-
 function App() {
   return (
     <Router>
@@ -25,6 +26,8 @@ function App() {
     <Route path='/contactus' element={<ContactUs/>} />
     <Route path='/payment' element={<PayStackIntegration/>} />
     <Route path='/traintimetable' element={<TrainTimetable/>} />
+    <Route path='/checkout' element={<CheckOut/>} />
+    <Route path='/mytickets' element= {<UsersTickets/>} />
   
     </Routes>
 

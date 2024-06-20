@@ -1,0 +1,31 @@
+.ticket{
+    background-color: rgb(232, 235, 235);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    /* width: 500px; */
+}
+.ticket-container{
+    background-color: #089930;
+    width: 400px;
+    color: black;
+    border-radius: 20px;
+    height: 300px;
+    /* margin: auto; */
+    margin-bottom: 50px;   
+}
+.ticket-block{
+    height: 250px;
+    width: 360px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: white;
+    /* text-align: center; */
+}
+.ticket-details{
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'katibeh';
+}

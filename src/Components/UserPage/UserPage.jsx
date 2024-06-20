@@ -41,6 +41,9 @@ const HomePageClick = () => {
 const TrainTimetableClick = () => {
   navigate('/traintimetable')
 }
+const UsersTicketsClick = () => {
+  navigate('/mytickets')
+}
 
   return (
     <div className='home-container'>
@@ -76,7 +79,7 @@ const TrainTimetableClick = () => {
      }}/>
      </button>
      <div className="dropdown-content">
-     <a onClick={TrainTimetableClick}>TRAIN TIMETABLE</a>
+     <a onClick={UsersTicketsClick}>My Tickets</a>
      <a onClick={HomePageClick}>LOG OUT</a>
      <a href="#"></a>
      </div>
@@ -100,11 +103,13 @@ const TrainTimetableClick = () => {
     </div> 
 
       <div className='heading-text'>
+      <marquee direction="left">
       <h2 className='home-text'>
-      Welcome to Gilbert Railway Corporation (GRC), 
-      an effecient and fast way to travel within Nigeria via trains.
-       Select your train, the date of your journey, book your ticket and all is set.
-       </h2>
+        Welcome to Gilbert Railway Corporation (GRC), 
+       an effecient and fast way to travel within Nigeria via trains.
+        Select your train, the date of your journey, book your ticket and all is set.
+        </h2>
+      </marquee>
       </div>
       <div className='home-iconlinks'>
       <div className='bookride homeicon' onClick={BookRideClick}>
@@ -147,7 +152,7 @@ const TrainTimetableClick = () => {
       />
       <h5>Terms and Condition</h5>
       </div>
-      <div className='timetable homeicon'>
+      <div className='timetable homeicon' onClick={TrainTimetableClick}>
       <img src={logo6} style={{
         width: '45px',
         height: '45px'
